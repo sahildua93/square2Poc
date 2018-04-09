@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const { server, app, io } = require('../app');
+
+
+server.listen(process.env.PORT || 3001, () => {
+    console.log('Express server listening on port ' + server.address().port);
+});
+
+module.exports = { server, app };
